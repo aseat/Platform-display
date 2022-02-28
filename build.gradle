@@ -1,0 +1,18 @@
+plugins {
+    id 'java-library'
+    id 'war'
+    id 'eclipse-wtp'
+}
+
+sourceCompatibility = 11
+tasks.withType(JavaCompile) {options.encoding = 'UTF-8'}
+repositories.mavenCentral()
+
+dependencies {
+    compileOnly 'jakarta.servlet:jakarta.servlet-api:4.0.4'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.+'
+    runtimeOnly 'org.postgresql:postgresql:42.3.1'
+}
+
+project.war.baseName = 'weblog'
+project.webAppDirName = 'webapp'
