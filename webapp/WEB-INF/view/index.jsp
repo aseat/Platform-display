@@ -78,6 +78,9 @@
                 } else if ("こだま".equals(trainResultSet.getString("name"))) {
                     color = "#0000FF";
                     nonReservedSeat = "自由席1-6,13-16号車";
+                }else if ("Aqours".equals(trainResultSet.getString("name"))) {
+                    color = "#00FFFF";
+                    nonReservedSeat = "全車指定席";
                 }
                 %>
                 <div class="from h2 mx-1" style="color:<%=color%>;"><%=trainResultSet.getString("name")%><%=trainResultSet.getString("id")%></div>
