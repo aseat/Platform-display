@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<%@ page import="com.example.model.blog.Blog"%>
+<%@ page import="com.example.model.shinkansen.Station"%>
 <%@ page import="java.time.*"%>
 <%@ page import="java.time.format.DateTimeFormatter"%>
 <%@ page import="java.util.ArrayList"%>
@@ -25,22 +25,22 @@
     </form>
 
     <%
-    Blog blog1 = new Blog(1L, LocalDate.of(2022, 2, 7), "はじめてのブログ", "はじめてブログを書いてみました。", LocalDate.now(),
-            LocalDate.now());
-    Blog blog2 = new Blog(2L, LocalDate.of(2022, 2, 8), "2回目のブログ", "またブログを書いてみました。", LocalDate.now(),
-            LocalDate.now());
-    Blog blog3 = new Blog(3L, LocalDate.of(2022, 2, 9), "何回目かのブログ", "ブログを何回か書いてみました。", LocalDate.now(),
-            LocalDate.now());
+    Station blog1 = new Station(1L, LocalDate.of(2022, 2, 7), "はじめてのブログ", "はじめてブログを書いてみました。", LocalDate.now(),
+        LocalDate.now());
+        Station blog2 = new Station(2L, LocalDate.of(2022, 2, 8), "2回目のブログ", "またブログを書いてみました。", LocalDate.now(),
+        LocalDate.now());
+        Station blog3 = new Station(3L, LocalDate.of(2022, 2, 9), "何回目かのブログ", "ブログを何回か書いてみました。", LocalDate.now(),
+        LocalDate.now());
 
-    List<Blog> blogs = new ArrayList<>();
+        List<Station> blogs = new ArrayList<>();
 
-    blogs.add(blog1);
-    blogs.add(blog2);
-    blogs.add(blog3);
+        blogs.add(blog1);
+        blogs.add(blog2);
+        blogs.add(blog3);
 
-    for (Blog blog : blogs) {
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
-        String date = dateTimeFormatter.format(blog.getDate());
+        for (Station blog : blogs) {
+            DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+            String date = dateTimeFormatter.format(blog.getDate());
     %>
     <p>【ID】</p>
 
